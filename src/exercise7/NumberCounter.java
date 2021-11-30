@@ -14,17 +14,25 @@ public class NumberCounter {
         System.out.println("Enter numbers: ");
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
+            
         }
 
         System.out.print("Search for number: ");
         int number = input.nextInt();
 
-        int numberOccurrences = 0; // Call method
-        System.out.println("Number occurrences: " + numberOccurrences);
+        int numberOccurrences = 0;
+        
+        System.out.println("Number occurrences: " + countNumberOccurrences(number, numbers, numberOccurrences));
     }
 
-    public static int countNumberOccurrences(int number, int[] numbers) {
-        // Implement method
-        return 0;
+    public static int countNumberOccurrences(int number, int[] numbers, int numberOccurrences) {
+        for (int i = 0; i < numbers.length; i ++) {
+            if(number == numbers[i])
+        {
+          numberOccurrences ++;
+        }
+      
     }
+    return numberOccurrences;
+}
 }
